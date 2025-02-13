@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yes!</title>
+
+  <!-- Google Fonts - Lemon фонт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet" />
+
+  <!-- Гол стилийн файл -->
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+  <!-- Дээд талд аудио тоглуулагч + Play товч -->
+  <div class="music-bar">
+    <audio id="bgMusic" src="closetoyou.mp3" controls></audio>
+    <button class="play-btn" onclick="playMusic()">Play</button>
+  </div>
+
+  <!-- 'Click play, Jaraa' гэсэн чиглүүлэх текст -->
+  <div class="click-play-text">Click the play button, Jaraa</div>
+
+  <!-- Дэгдээхэй (chick) + Зараа (hedgehog) -->
+  <img src="chick.png" alt="Chick" class="chick">
+  <img src="hedgehog.png" alt="Hedgehog" class="hedgehog">
+  <img src="arrow.png" alt="arrow" class="dotted-arrow">
+
+  <!-- Шувуу, зарааны эргэн тойрон байрших жижиг зүрхнүүд -->
+  <img src="heart_yellow.png" alt="heart" class="mini-heart mini-heart1">
+  <img src="heart_blue.png" alt="heart" class="mini-heart mini-heart2">
+  <img src="heart_white.png" alt="heart" class="mini-heart mini-heart3">
+
+  <!-- Баруун талд захианы хэсэг -->
+  <div class="letter-wrap">
+    <div class="letter-bg"></div> <!-- Арын шар блок -->
+    <div class="letter-paper">    <!-- Цаас -->
+      <h1>I love you baby, my lovely jaraa! ❤️</h1>
+      <p>
+        My latte, My Theresse, My jaraa <br/>
+        you always be my valentine <br/><br/>
+        Жил болгон чамтайгаа энэ өдрийг тэмдэглэээр байна. <br/>
+        Чи минь латтегаа би американо гоо уугаад чамтайгаа хорвоо ертөнцийн сонин хачныг өдөр бүр ярилцаад жаргаж суухыг хүсэж байна <br/>
+        Миний хайртай гүнж ааштай нялх зулзага минь хурдан уулзацгаая<br/><br/>
+        Let's meet at 5 PM on February 14th, dear Jiv Jivees❤️
+      </p>
+    </div>
+  </div>
+
+  <!-- Доороос дээш хөөрөх зүрхнүүд (animation) -->
+  <img src="heart_blue.png" alt="heart" class="heart float-heart1">
+  <img src="heart_yellow.png" alt="heart" class="heart float-heart2">
+  <img src="heart_white.png" alt="heart" class="heart float-heart3">
+
+  <!-- JS файл -->
+  <script src="script1.js"></script>
+</body>
+</html>

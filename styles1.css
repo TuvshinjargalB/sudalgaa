@@ -1,0 +1,196 @@
+/* ------------------------------
+   Ерөнхий үндсэн тохиргоо
+------------------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Lemon', cursive;
+    background-color: #FF779D;/* Ягаан фон */
+    position: relative;
+  }
+  
+  /* ------------------------------
+     Аудио ба Play товч
+  ------------------------------- */
+  .music-bar {
+    text-align: center;
+    padding-top: 50px;
+    padding-right: 700px;
+  }
+  .play-btn {
+    margin-left: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #FECDCD; 
+    border: 1px solid #FECDCD;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .play-btn:hover {
+    background-color: #FEFBFF;
+    border: 2px solid #F4F3C0;
+  }
+  
+  /* ------------------------------
+     Click play, Jaraa (сэдэлжүүлэх текст)
+  ------------------------------- */
+  .click-play-text {
+    position: absolute;
+    top: 220px;   /* Дурын байрлал (Figma дээр X=... Y=...) */
+    left: 120px;
+    color: #fff;
+    font-size: 25px;
+  }
+  
+  /* ------------------------------
+     Дэгдээхэй, Зараа
+  ------------------------------- */
+  .chick {
+    position: absolute;
+    bottom: 50px; 
+    left: 100px;
+    width: 220px;
+  }
+  .hedgehog {
+    position: absolute;
+    bottom: 50px; 
+    left: 350px;
+    width: 220px;
+  }
+  
+  /* ------------------------------
+     Шувуу, зарааны эргэн тойронх жижиг зүрхнүүд
+  ------------------------------- */
+  .mini-heart {
+    position: absolute;
+    width: 70px;
+  }
+  .mini-heart1 {
+    bottom: 200px; 
+    left: 90px;
+  }
+  .mini-heart2 {
+    bottom: 250px;
+    left: 500px;
+  }
+  .mini-heart3 {
+    bottom: 170px;
+    left: 280px;
+  }
+  /* Эдгээр зүрхний байрлал, хэмжээ зэргийг Figma-с хараад нарийвчлан тааруулж болно */
+  
+  /* ------------------------------
+     Захианы блок
+  ------------------------------- */
+  .letter-wrap {
+    position: absolute;
+    top: 100px;
+    right: 80px; /* дэлгэцийн баруун талаас 80px */
+    width: 300px;
+    height: 350px; 
+  }
+  .letter-bg {
+    background-color: #F4F3C0;  /* Шар фон */
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: -40px;   /* бага зэрэг зөрүүлж, сүүдэр мэт эффект */
+    left: -150px;
+    right: -100px;
+    z-index: 1;
+  }
+  .letter-paper {
+    position: absolute;
+    top: -20px; left: -135px;
+    width: 380px; 
+    height: 420px;
+    background-color: #FEFBFF; /* Цаас */
+    border: 2px dashed #000;   /* Хүрээ (шаргал-улаан хийж болно) */
+    z-index: 2;
+    padding: 20px;
+    animation: floatLetter 3s ease-in-out infinite alternate;
+  }
+  @keyframes floatLetter {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-5px) rotate(-1deg); }
+  }
+  .letter-paper h1 {
+    color: #000000;
+    text-align: center; /* Figma дээр яаж байна түүн шиг */
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  .letter-paper p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  
+  /* ------------------------------
+     Доороос дээш хөөрөх зүрхнүүд
+  ------------------------------- */
+  .heart {
+    position: absolute;
+    bottom: -50px;
+    animation: floatHearts 6s linear infinite;
+  }
+  .float-heart1 {
+    left: 30%;
+    width: 50px;
+    animation-delay: 0s;
+  }
+  .float-heart2 {
+    left: 50%;
+    width: 60px;
+    animation-delay: 1.5s;
+  }
+  .float-heart3 {
+    left: 70%;
+    width: 40px;
+    animation-delay: 0.5s;
+  }
+  @keyframes floatHearts {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* ------------------------------
+     Media Query (жижиг дэлгэц)
+  ------------------------------- */
+  @media (max-width: 768px) {
+    .letter-wrap {
+      top: 120px;
+      right: 10px;
+      width: 250px;
+      height: 320px;
+    }
+    .chick { left: 40px; }
+    .hedgehog { left: 160px; }
+    .click-play-text { left: 100px; }
+  }
+  
+  .dotted-arrow {
+    position: absolute;
+    top: 120px;      /* Play товчтой харьцуулан туршиж олох */
+    left: 300px;     /* байршлыг Figma-ийн coordinate-тэй тааруулна */
+    width: 140px;    /* шаардлагатай бол өөрчилнө */
+    /* Хэрэв сумыг жаахан эргүүлэх бол: */
+    /* transform: rotate(-10deg); */
+  
+    /* Сүүдэр нэмэхийг хүсвэл (PNG файл дээр төдийлөн мэдэгдэхгүй байж магадгүй):
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+    */
+  }
+  
